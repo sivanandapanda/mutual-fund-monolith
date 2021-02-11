@@ -8,3 +8,6 @@ docker tag quarkus/mutual-fund-api registry.heroku.com/mutual-fund-analysis/web
 docker push registry.heroku.com/mutual-fund-analysis/web
 
 heroku container:release web --app=mutual-fund-analysis
+
+#logging in to dyno
+heroku run bash --type=web --app=mutual-fund-analysis
