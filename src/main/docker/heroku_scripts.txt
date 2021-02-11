@@ -1,0 +1,10 @@
+docker build -f src/main/docker/Dockerfile.jvm -t quarkus/mutual-fund-api .
+docker build -f src/main/docker/Dockerfile.native -t quarkus/mutual-fund-api .
+
+heroku container:login
+docker login --username=_ --password=$(heroku auth:token) registry.heroku.com
+
+docker tag quarkus/mutual-fund-api registry.heroku.com/mutual-fund-analysis/web
+docker push registry.heroku.com/mutual-fund-analysis/web
+
+heroku container:release web --app=mutual-fund-analysis
