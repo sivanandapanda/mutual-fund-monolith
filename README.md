@@ -1,3 +1,5 @@
+[![Build Status](https://www.travis-ci.com/sivanandapanda/mutual-fund-monolith.svg?branch=main)](https://www.travis-ci.com/sivanandapanda/mutual-fund-monolith)
+
 # mutual-fund-api project
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
