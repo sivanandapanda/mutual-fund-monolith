@@ -1,0 +1,12 @@
+language: java
+
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - ./mvnw clean package -Dquarkus.container-image.build=true
+
+script:
+  - docker ps -a
